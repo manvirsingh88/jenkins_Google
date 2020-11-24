@@ -35,7 +35,7 @@ public class Google {
 
 	}
 
-	@Test(priority = 1,invocationCount = 2)
+	@Test(priority = 2,invocationCount = 2)
 	public void verifyPageTitle() {
 
 		String Title = driver.getTitle();
@@ -43,7 +43,7 @@ public class Google {
 		Assert.assertEquals(Title, "Google");
 
 	}
-	@Test(priority = 2,invocationCount = 2)
+	@Test(priority = 1,invocationCount = 2)
 	public void verifylogo() {
 		
 		WebElement logo=driver.findElement(By.cssSelector("img[alt='Google']"));
