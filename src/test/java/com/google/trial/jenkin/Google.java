@@ -43,7 +43,7 @@ public class Google {
 		Assert.assertEquals(Title, "Google");
 
 	}
-	
+	@Test
 	public void verifylogo() {
 		
 		WebElement logo=driver.findElement(By.cssSelector("img[alt='Google']"));
