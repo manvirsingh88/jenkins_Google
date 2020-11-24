@@ -22,7 +22,7 @@ public class Google {
 	@BeforeMethod
 	public void setup() {
 		
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver().setup();
 
 		driver = new ChromeDriver();
 
