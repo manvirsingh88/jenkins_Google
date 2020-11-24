@@ -1,7 +1,5 @@
 package com.google.trial.jenkin;
 
-import static org.testng.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,8 +11,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class Google {
 
 	WebDriver driver;
@@ -22,7 +18,8 @@ public class Google {
 	@BeforeMethod
 	public void setup() {
 		
-		WebDriverManager.firefoxdriver().setup();
+		System.setProperty("webdriver.chrome.driver",
+				"F:\\Carbonite\\jenkin\\Driver\\chromedriver.exe");
 
 		driver = new ChromeDriver();
 
