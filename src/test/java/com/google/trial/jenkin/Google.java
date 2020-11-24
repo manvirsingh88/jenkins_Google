@@ -6,10 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Google {
 
@@ -18,10 +21,9 @@ public class Google {
 	@BeforeMethod
 	public void setup() {
 		
-		System.setProperty("webdriver.chrome.driver",
-				"F:\\Carbonite\\jenkin\\Driver\\chromedriver.exe");
+		WebDriverManager.firefoxdriver().setup();
 
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
