@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "mvn help:effective-settings help:effective-pom deploy -X"
+                bat "mvn clean install -X"
             }
         }
     }
